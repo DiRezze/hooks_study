@@ -1,6 +1,6 @@
 .nav-bar{
     display: flex;
-    position: fixed;
+    position: sticky;
     top: 0;
     left: 0;
     height: 56px;
@@ -11,15 +11,22 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    place-self: center center;
+}
+.brand-link{
+    place-items: center center;
+    display: flex;
 }
 .brand-icon{
     height: 2em;
     margin: 8px 8px 8px 16px;
     will-change: filter;
+    transition: ease-in-out 0.3s;
     transition: filter 300ms;
 }
 .brand-icon:hover{
     animation: logo-spin ease-in-out 0.8s;
+    filter: drop-shadow(0 0 32px #61dafb);
 }
 .links-list{
     list-style-type: none;
@@ -30,10 +37,26 @@
 .links-list{
     cursor: pointer;
 }
+.links-list li{
+    transition: ease-in-out 0.3s;
+}
+.links-list li::after{
+    content: "";
+    position: absolute;
+    left: 10%;
+    right: 10%;
+    bottom: -6px;
+    height: 3px;
+    background-color: #00aaff;
+    border-radius: 10px;
+    transform: scaleX(0);
+    transition: transform 0.3s ease-in-out;
+}
+.links-list li:hover::after {
+    transform: scaleX(1);
+}
 .links-list li:hover{
-    filter: drop-shadow(0 0 48px #61dafb);
-    border-bottom: #61dafb 2px solid;
-    height: 28px;
+    filter: drop-shadow(0 0 32px #61dafb);
 }
 @keyframes logo-spin {
     from {

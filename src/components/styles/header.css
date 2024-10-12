@@ -1,0 +1,15 @@
+.link-btn{
+    border-radius: 100px;
+    margin: 8px;
+    width: 90vw;
+    max-width: 250px;
+    border-color: #61dafb;
+    transition: ease-in-out 0.3s;
+}
+.link-btn:hover{
+    filter: drop-shadow(0 0 8px #61dafb36);
+    transform: scale(1.01);
+}
+.link-btn:active{
+    transform: scale(0.99);
+}

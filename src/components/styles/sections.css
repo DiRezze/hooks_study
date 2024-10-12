@@ -1,0 +1,11 @@
+section{
+    display: grid;
+    place-items: center;
+}
+article{
+    width: 90vw;
+}
+article p {
+    text-indent: 3em;
+    text-align: justify;
+}
